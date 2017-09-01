@@ -1,0 +1,12 @@
+---
+pl:
+  navbar:
+    home: Strona główna
+  main_area:
+    add_node_form:
+      title: Dodawanie węzła
+      text_hint: Adres IP lub hostname węzła
+      invalid_format: Niewłaściwy format
+      add_button: Dodaj
+    node_list:
+      title: Lista węzłów

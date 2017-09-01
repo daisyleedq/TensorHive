@@ -1,0 +1,12 @@
+---
+en:
+  navbar:
+    home: Home
+  main_area:
+    add_node_form:
+      title: Add node
+      text_hint: Node IP address
+      invalid_format: Invalid format
+      add_button: Add
+    node_list:
+      title: Node list
