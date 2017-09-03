@@ -1,8 +1,12 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+# Localization
 activate :i18n, mount_at_root: :pl
+
+# Live-reload
 activate :livereload
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -42,7 +46,10 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+# What happens on command: middleman build
+configure :build do
+  activate :minify_css
+  activate :minify_javascript
+
+  activate :relative_assets
+end
