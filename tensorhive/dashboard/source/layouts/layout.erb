@@ -54,10 +54,10 @@
     <%= yield %>
     <%= javascript_include_tag 'https://code.getmdl.io/1.3.0/material.min.js' %><!-- used within entire layout: components, animations -->
     <%= javascript_include_tag 'https://www.gstatic.com/charts/loader.js' %>    <!-- used in google_charts_playground.js -->
-
+    <%= javascript_include_tag 'google_charts_playground' %>
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <%= javascript_include_tag 'application' %>                                 <!-- custom javascripts -->
+
   </body>
 </html>
-
