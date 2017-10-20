@@ -1,4 +1,4 @@
-<% path = 'partials/main_area_partials' %>
+<% path = 'partials/main_area' %>
 <%#==================================================================%>
 
 <main class="mdl-layout__content mdl-color--grey-100">
@@ -22,6 +22,10 @@
 
     <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
       <%= partial "#{path}/message" %>
+    </div>
+
+    <div class="demo-cards mdl-cell mdl-cell--8-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+      <div id="piechart" style="width: 900px; height: 500px;"></div>
     </div>
   </div>
 </main>

@@ -6,7 +6,8 @@ en:
     add_node_form:
       title: Add node
       text_hint: Node IP address
-      invalid_format: Invalid format
+      tooltip: Must be accessible via ssh without password
+      invalid_format: Invalid format (required pattern %{pattern})
       add_button: Add
     node_list:
       title: Node list
