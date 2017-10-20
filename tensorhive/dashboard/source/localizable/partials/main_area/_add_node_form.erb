@@ -1,14 +1,36 @@
+<%# TODO add pattern validator for input %>
+
+<% input_pattern = '[a-zA-Z]{3,}'%>
 <div class="demo-options mdl-card mdl-color--blue-grey-500 mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
     <div class="mdl-card__supporting-text mdl-color-text--blue-grey-50">
-        <h3><%= t('main_area.add_node_form.title') %></h3>
+        <!-- Title -->
+        <h3>
+            <%= t('main_area.add_node_form.title') %>
+        </h3>
         
-        <div class="mdl-textfield mdl-js-textfield">
-            <input id='new_node_address' class="mdl-textfield__input" type="text" pattern="^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$" id="node_address">
-            <label class="mdl-textfield__label" for="node_address"><%= t('main_area.add_node_form.text_hint' )%></label>
-            <span class="mdl-textfield__error"><%= t('main_area.add_node_form.invalid_format') %></span>
+        <div id='add_node' class="mdl-textfield mdl-js-textfield">
+            
+            <!-- Add node input -->
+            <input pattern="<%= input_pattern %>" id='new_node_address' class="mdl-textfield__input" type="text" id="node_address">
+                <!-- Large Tooltip -->
+                <div class="mdl-tooltip mdl-tooltip--large" for="new_node_address">
+                    <%= t('main_area.add_node_form.tooltip') %>
+                </div>
+            </input>
+
+            <!-- Hint -->
+            <label class="mdl-textfield__label" for="node_address">
+                <%= t('main_area.add_node_form.text_hint' )%>
+                </label>
+
+            <!-- Error message on wrong input (not matching the pattern)-->
+            <span class="mdl-textfield__error">
+                <%= t('main_area.add_node_form.invalid_format', pattern: input_pattern) %>
+            </span>
         </div>
     </div>
 
+    <!-- Add node button -->
     <div class="mdl-card__actions mdl-card--border">
         <input type="button" 
             value="<%= t('main_area.add_node_form.add_button') %>" 

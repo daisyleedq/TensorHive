@@ -24,13 +24,13 @@ var nodes = [];
 function add_node() {
     var input = $('#new_node_address');
 
-    //if(input.validity.patternMismatch){
+    if (input[0].checkValidity()) {
         var ip_address = input.val();
         var new_node = node(nodes.length, ip_address);
 
         nodes.push(new_node);
         update_node_list(new_node);
-    //}
+    }
 }
 
 function update_node_list(new_node) {
