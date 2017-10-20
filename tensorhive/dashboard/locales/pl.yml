@@ -4,8 +4,10 @@ pl:
     home: Strona główna
     messages: Komunikaty
     settings: Ustawienia
-
   main_area:
+    top:
+      gpu_utilization_plot:
+        title: Zużycie GPU na węzłach
     add_node_form:
       title: Dodawanie węzła
       text_hint: Adres IP lub hostname węzła 

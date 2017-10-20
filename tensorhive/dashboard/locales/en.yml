@@ -2,7 +2,12 @@
 en:
   navbar:
     home: Home
+    messages: Reports
+    settings: Settings
   main_area:
+    top:
+      gpu_utilization_plot:
+        title: GPU utilization on nodes
     add_node_form:
       title: Add node
       text_hint: Node IP address

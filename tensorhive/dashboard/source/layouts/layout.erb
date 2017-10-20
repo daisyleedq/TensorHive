@@ -46,8 +46,9 @@
   </body>
   </head>
   <body>
-    <%= javascript_include_tag 'smoothie' %> <!-- Chart library -->
     <%= yield %>
+    <%= javascript_include_tag 'smoothie' %> <!-- Chart library -->
+    <%= javascript_include_tag 'gpu_utilization_plot' %> <!-- Chart library -->
     <%= javascript_include_tag 'https://code.getmdl.io/1.3.0/material.min.js' %>  <!-- used within the entire layout: components, animations -->
     <%= javascript_include_tag 'https://www.gstatic.com/charts/loader.js' %>      <!-- used in google_charts_playground.js -->
     <%= javascript_include_tag 'google_charts_playground' %>
